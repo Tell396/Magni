@@ -11,11 +11,12 @@ function App(props) {
 
   connect((msg) => {
     setChatHistory(msg)
-    console.log(chatHistory)
+    //console.log(chatHistory)
+    console.log(`adsd: ${msg.data}`)
   })
 
   function send() {
-    console.log("Hello")
+    //console.log("Hello")
     sendMsg("Hello")
   }
 

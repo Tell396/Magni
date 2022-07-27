@@ -5,7 +5,6 @@ const connect = cb => {
 
   socket.onopen = () => console.log("Successfully connected!")
   socket.onmessage = msg => {
-    console.log(msg)
     cb(msg)
   }
   socket.onclose = event => console.log(`Socket close connection: ${event}`)
