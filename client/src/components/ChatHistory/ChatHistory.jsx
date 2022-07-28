@@ -1,22 +1,18 @@
-import React from "react"
-import "./ChatHistory.scss"
+import React, { Component } from "react";
+import "./ChatHistory.scss";
 
 const ChatHistory = (props) => {
-  const obj = Object.assign({}, props);
-
-  const messages = props.chatHistory.map((msg, index) => {
-    <p key={index}>{msg}[props.chatHistory]</p>
-  })
+  const messages = props.chatHistory.map((msg, index) => (
+    <p key={index}>{msg.data}</p>
+  ));
 
   return (
-    <div>
-    {/* {obj.chatHistory.map((msg, index) => {
-        console.log(obj.chatHistory)
-        //return <p key={index}>{msg}</p> 
-      })}*/}
-
+    <div className="ChatHistory">
+      <h2>Chat History</h2>
+      {messages}
     </div>
   )
 }
 
-export default ChatHistory
+
+export default ChatHistory;
