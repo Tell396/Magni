@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import "./ChatHistory.scss";
 
 const ChatHistory = (props) => {
-  const messages = props.chatHistory.map((msg, index) => (
-    <p key={index}>{msg.data}</p>
-  ));
-
   return (
     <div className="ChatHistory">
       <h2>Chat History</h2>
-      {messages}
+      {props.chatHistory.map((msg, index) => {
+        
+        console.log(msg)
+        return (
+          <p key={index}>{msg.data}</p>
+        )
+      })}
     </div>
   )
 }

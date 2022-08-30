@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { connect, sendMsg } from './api/index'
 import './App.scss';
 
@@ -6,7 +6,7 @@ import './App.scss';
 import Header from './components/Header/Header'
 import ChatHistory from './components/ChatHistory/ChatHistory'
 
-const App = (props) => {
+/* const App = (props) => {
   const [chatHistory, setChatHistory] = useState([])
 
   connect((msg) => {
@@ -28,9 +28,9 @@ const App = (props) => {
       <button onClick={send}>Hit</button>
     </div>
   );
-}
+} */
 
-/* class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,6 +62,6 @@ const App = (props) => {
       </div>
     );
   }
-} */
+}
 
 export default App;
